@@ -12,6 +12,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+        
+      - name: Install Project
+        run: npm install
 
       - name: Render Deploy
         uses: johnbeynon/render-deploy-action@v0.0.8
