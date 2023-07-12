@@ -1,8 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import Landing from './Landing.tsx';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Landing from "./Landing.tsx";
+import "./Home.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Landing />
