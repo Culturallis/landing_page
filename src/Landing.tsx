@@ -1,11 +1,8 @@
-import React from 'react';
+import React from "react";
+import { Navbar } from "./components/Navbar/index.tsx";
 
 function Landing() {
-  return (
-    <div className="Landing">
-      Aqui vão estar os componentes da Landing Page!!!
-    </div>
-  );
+  return <Navbar />;
 }
 
 export default Landing;
