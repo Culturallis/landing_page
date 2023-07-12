@@ -1,4 +1,4 @@
-name: Deployiing Landing Page on Render
+name: Deploying Landing Page on Render
 
 on:
   pull_request:
