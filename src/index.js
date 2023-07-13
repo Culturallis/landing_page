@@ -4,6 +4,7 @@ import Landing from "./Landing.tsx";
 import "./Home.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
   <React.StrictMode>
     <Landing />

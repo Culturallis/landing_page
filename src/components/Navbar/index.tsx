@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "./styles.ts";
-import Logo_Culturallis from "../../assets/Logo_Culturallis.png";
+import Logo_Culturallis from "../../assets/images/Logo_Culturallis.png";
 
 export const Navbar = () => {
   return (
