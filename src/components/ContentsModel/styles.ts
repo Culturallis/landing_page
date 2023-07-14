@@ -9,7 +9,7 @@ export const Wrapper = styled.div<IContentProps>(
     height: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 6rem 6rem;
+    padding: 6rem;
     background: ${hasBackground ? "#F3F3F3" : "transparent"};
   `
 );
