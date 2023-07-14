@@ -11,3 +11,12 @@ export const historiaCulturallisCima: string =
 
 export const historiaCulturallisBaixo: string =
   "Nossa maior meta é clara desde o início: incluir a todos na cultura e valorizar a expressão de todos os grupos nesse cenário.";
+
+export const firstBigNumber: string = "90";
+
+export const secondBigNumber: string = "202";
+
+export const thirdBigNumber: string = "96,1";
+
+export const bigNumbersDescription: string =
+  "90% dos brasileiros não têm acesso a cultura, mas 96,1% deles têm interesse em consumi-la de alguma forma. Os mais afetados quando se trata da desigualdade cultural são os grupos mais vulneráveis socialmente. Eles representam além de uma importante expressão artística, uma oportunidade de movimentar a economia. Em 2022 foram movimentados R$202 bilhões só em periferias.";

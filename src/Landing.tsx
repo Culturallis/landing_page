@@ -9,6 +9,7 @@ import * as T from "./assets/texts/texts.ts";
 import { FloatingWords } from "./components/FloatingWords/index.tsx";
 import YouTube from "react-youtube";
 import Historia_Culturallis from "./assets/images/Historia_Culturallis.png";
+import { BigNumbers } from "./components/BigNumbers/index.tsx";
 
 function Landing() {
   const opts = {
@@ -61,6 +62,12 @@ function Landing() {
             <ParagraphText text={T.historiaCulturallisBaixo} />
           </Fragment>
         }
+      />
+      <BigNumbers
+        firstNumber={T.firstBigNumber}
+        secondNumber={T.secondBigNumber}
+        thirdNumber={T.thirdBigNumber}
+        description={T.bigNumbersDescription}
       />
     </>
   );
