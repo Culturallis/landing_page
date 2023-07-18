@@ -6,7 +6,8 @@ export const Wrapper = styled(Box)(
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 6rem 10rem 0 0;
+    padding: 6rem 6rem 6rem 0;
+    position: relative;
     background-color: #f6f6f6;
   `
 );
@@ -26,6 +27,8 @@ export const InfoContainer = styled.div(
       justify-content: space-between;
       align-items: center;
       gap: 1rem;
+      align-self: flex-end;
+      width: 47%;
     `
 );
 
