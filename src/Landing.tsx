@@ -11,6 +11,7 @@ import { FloatingWords } from "./components/FloatingWords/index.tsx";
 import YouTube from "react-youtube";
 import Historia_Culturallis from "./assets/images/Historia_Culturallis.png";
 import { BigNumbers } from "./components/BigNumbers/index.tsx";
+import { Slogan } from "./components/Slogan/index.tsx";
 
 function Landing() {
   const opts = {
@@ -70,6 +71,7 @@ function Landing() {
         thirdNumber={T.thirdBigNumber}
         description={T.bigNumbersDescription}
       />
+      <Slogan/>
       <Footer/>
     </>
   );
