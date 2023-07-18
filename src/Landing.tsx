@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import { Navbar } from "./components/Navbar/index.tsx";
+import { Footer } from "./components/Footer/index.tsx";
 import { DownloadsContainer } from "./components/DownloadsContainer/index.tsx";
 import { ContentsModel } from "./components/ContentsModel/index.tsx";
 import { CardPhoto } from "./components/CardPhoto/index.tsx";
@@ -69,6 +70,7 @@ function Landing() {
         thirdNumber={T.thirdBigNumber}
         description={T.bigNumbersDescription}
       />
+      <Footer/>
     </>
   );
 }
