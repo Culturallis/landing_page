@@ -3,6 +3,7 @@ import {styled, css} from 'styled-components'
 export const SloganSection = styled.section(() => css`
     height: 90vh;
     width: 100%;
+
     background-color: #06A73B;
     display: flex;
     justify-content: center;
@@ -12,5 +13,6 @@ export const SloganSection = styled.section(() => css`
 export const SloganText = styled.h2(() => css`
     font-size: 4rem;
     font-weight: 600;
+
     color: #f1f1f1;
 `)
