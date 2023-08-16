@@ -1,9 +1,13 @@
 import * as S from './styles.ts';
 
-export const Slogan = () => {
+interface ISloganProps{
+    text: string
+}
+
+export const Slogan = (props:ISloganProps) => {
     return(
         <S.SloganSection>
-            <S.SloganText className="fonteInterRegular">Culturallis, a arte de fazer cultura.</S.SloganText>
+            <S.SloganText className="fonteInterRegular">{props.text}</S.SloganText>
         </S.SloganSection>
     )
 }

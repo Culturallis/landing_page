@@ -71,7 +71,9 @@ function Landing() {
         thirdNumber={T.thirdBigNumber}
         description={T.bigNumbersDescription}
       />
-      <Slogan/>
+      <Slogan
+        text={T.sloganText}
+      />
       <Footer/>
     </>
   );

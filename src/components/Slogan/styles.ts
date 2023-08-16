@@ -12,5 +12,5 @@ export const SloganSection = styled.section(() => css`
 export const SloganText = styled.h2(() => css`
     font-size: 4rem;
     font-weight: 600;
-    color: #FFFFFF;
+    color: #f1f1f1;
 `)
