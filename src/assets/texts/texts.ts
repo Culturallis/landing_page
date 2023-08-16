@@ -22,3 +22,4 @@ export const bigNumbersDescription: string =
   "90% dos brasileiros não têm acesso a cultura, mas 96,1% deles têm interesse em consumi-la de alguma forma. Os mais afetados quando se trata da desigualdade cultural são os grupos mais vulneráveis socialmente. Eles representam além de uma importante expressão artística, uma oportunidade de movimentar a economia. Em 2022 foram movimentados R$202 bilhões só em periferias.";
 
 export const sloganText: string = "Culturallis, a arte de fazer cultura."
+

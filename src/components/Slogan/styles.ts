@@ -1,19 +1,18 @@
 import {styled, css} from 'styled-components'
 
-export const Section = styled.section(() => css`
+export const SloganSection = styled.section(() => css`
+    height: 90vh;
     width: 100%;
-    height: 100vh;
+
     background-color: #06A73B;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
 `)
 
-export const Text = styled.p(() => css`
-    text-align: center;
-    width: 90%;
-    font-size: 4em;
-    font-weight: 900;
+export const SloganText = styled.h2(() => css`
+    font-size: 4rem;
+    font-weight: 600;
+
     color: #f1f1f1;
 `)

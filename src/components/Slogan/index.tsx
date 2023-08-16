@@ -1,10 +1,13 @@
-import React from "react";
 import * as S from './styles.ts';
 
-export const Slogan = ({text}) => {
+interface ISloganProps{
+    text: string
+}
+
+export const Slogan = (props:ISloganProps) => {
     return(
-        <S.Section>
-            <S.Text className='fonteInterRegular'>{text}</S.Text>
-        </S.Section>
+        <S.SloganSection>
+            <S.SloganText className="fonteInterRegular">{props.text}</S.SloganText>
+        </S.SloganSection>
     )
 }
