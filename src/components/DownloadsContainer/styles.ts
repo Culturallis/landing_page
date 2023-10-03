@@ -1,20 +1,43 @@
 import styled, { css } from "styled-components";
 import Box from "@mui/material/Box";
 
+export const Container = styled.div(
+  () => css`
+    display: flex;
+    background-color: #f6f6f6;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 1450px) {
+      align-items: flex-end;
+    }
+  `
+);
+
 export const Wrapper = styled(Box)(
   () => css`
-    width: 100%;
     display: flex;
-    justify-content: space-between;
-    padding: 6rem 6rem 6rem 0;
+    justify-content: flex-end;
+    padding: 6rem 12rem;
+    padding-top: 12rem;
     position: relative;
     background-color: #f6f6f6;
+
+    @media (max-width: 1450px) {
+      padding: 6rem 4rem;
+    }
   `
 );
 
 export const Image = styled.img(
   () => css`
-    height: 100%;
+    width: 50%;
+    z-index: 1;
+
+    @media (max-width: 1450px) {
+      height: 100%;
+      width: fit-content;
+    }
   `
 );
 
@@ -26,15 +49,13 @@ export const InfoContainer = styled.div(
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      gap: 1rem;
-      align-self: flex-end;
-      width: 47%;
+      gap: 2rem;
     `
 );
 
 export const ImageLogo = styled.img(
   () => css`
-    height: 100%;
+    margin-bottom: 2rem;
   `
 );
 
@@ -45,8 +66,6 @@ export const Title = styled.h1(
       text-weight: bold;
       text-align: center;
       text-transform: uppercase;
-      position: absolute;
-      bottom: 1rem;
     `
 );
 
@@ -86,6 +105,5 @@ export const LogoContainer = styled.div(
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    position: relative;
   `
 );
