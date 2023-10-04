@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography'
 
 export const Footer = styled.footer(() => css`
     width: 100%;
-    height: 70vh;
+    height: 35vh;
     background-color: #F5E6FD;
     padding: 4rem 5rem 2rem 5rem;
 `)

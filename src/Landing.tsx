@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { Navbar } from "./components/Navbar/index.tsx";
 import { Footer } from "./components/Footer/index.tsx";
 import { DownloadsContainer } from "./components/DownloadsContainer/index.tsx";
@@ -12,12 +12,36 @@ import YouTube from "react-youtube";
 import Historia_Culturallis from "./assets/images/Historia_Culturallis.png";
 import { BigNumbers } from "./components/BigNumbers/index.tsx";
 import { Slogan } from "./components/Slogan/index.tsx";
+import { database } from "./firebaseConnection.tsx";
+import { onValue, ref } from "firebase/database";
 
 function Landing() {
   const opts = {
     height: "100%",
     width: "100%",
   };
+
+  const [data, setData] = useState({});
+
+  useEffect(() => {
+    const dadosRef = ref(database, "data");
+
+    const unsubscribe = onValue(dadosRef, (snapshot) => {
+      if (snapshot.exists()) {
+        const resultData = snapshot.val();
+        setData(resultData);
+      }
+    });
+
+    return () => {
+      unsubscribe();
+    };
+  }, []);
+
+  useEffect(() => {
+    console.log(data);
+  }, [data]);
+
   return (
     <>
       <Navbar />
@@ -71,10 +95,8 @@ function Landing() {
         thirdNumber={T.thirdBigNumber}
         description={T.bigNumbersDescription}
       />
-      <Slogan
-        text={T.sloganText}
-      />
-      <Footer/>
+      <Slogan text={T.sloganText} />
+      <Footer />
     </>
   );
 }
