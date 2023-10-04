@@ -2,8 +2,8 @@ import styled, { css } from "styled-components";
 
 export const CardImage = styled.img(
   () => css`
-    max-width: 40rem;
-    height: 100%;
+    max-width: 50rem;
+    // height: 100%;
   `
 );
 

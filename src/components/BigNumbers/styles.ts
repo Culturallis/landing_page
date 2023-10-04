@@ -12,7 +12,11 @@ export const Wrapper = styled.div(
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 6rem;
+    padding: 12rem 6rem;
+
+    @media (max-width: 1450px) {
+      padding: 8rem 6rem;
+    }
   `
 );
 
@@ -29,19 +33,20 @@ export const ContainerNumber = styled.div(
   () => css`
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 0.5rem;
-    height: 17rem;
     width: 33%;
   `
 );
 
 export const Number = styled.div<INumberProps>(
   ({ fontColor }) => css`
-    font-size: 3.2rem;
+    font-size: 1.8rem;
     color: ${fontColor};
     font-weight: 500;
+    text-align: center;
+    height: 10rem;
 
     & > span {
       font-weight: 700;
@@ -61,7 +66,8 @@ export const Info = styled.h4(
   () => css`
     font-size: 1.6rem;
     text-align: center;
-    height: 52%;
+    align-self: center;
+    font-weight: 500;
   `
 );
 

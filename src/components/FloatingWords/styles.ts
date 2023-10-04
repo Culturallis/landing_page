@@ -60,7 +60,7 @@ export const Green = styled.h2<IPositionprops>(
 export const Wrapper = styled.div(
   () => css`
     width: 100%;
-    max-width: 40rem;
+    max-width: 50rem;
     display: flex;
     flex-direction: column;
     gap: 1.8rem;

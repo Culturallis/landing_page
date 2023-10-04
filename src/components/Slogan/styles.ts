@@ -1,7 +1,7 @@
 import {styled, css} from 'styled-components'
 
 export const SloganSection = styled.section(() => css`
-    height: 90vh;
+    height: 60vh;
     width: 100%;
 
     background-color: #06A73B;

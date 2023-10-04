@@ -3,8 +3,24 @@ import * as S from "./styles.ts";
 
 interface IParagraphTextprops {
   text: React.ReactNode;
+  color?: string;
+  nameClass?: string;
+  sizeFont?: string;
 }
 
-export const ParagraphText = ({ text }: IParagraphTextprops) => {
-  return <S.Text>{text}</S.Text>;
+export const ParagraphText = ({
+  text,
+  color,
+  nameClass,
+  sizeFont,
+}: IParagraphTextprops) => {
+  return (
+    <S.Text
+      className={nameClass}
+      style={{ fontSize: sizeFont }}
+      colorText={color}
+    >
+      {text}
+    </S.Text>
+  );
 };

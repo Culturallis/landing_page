@@ -16,16 +16,18 @@ export const BigNumbers = (props: IBigNumberProps) => {
           <S.Number className="fonteUnboundedBold" fontColor={"#E72929"}>
             <span>{props.firstNumber}</span>%
           </S.Number>
-          <S.Info>
+          <S.Info className="fonteInterRegular">
             Dos brasileiros não têm <br />
             acesso à cultura{" "}
           </S.Info>
         </S.ContainerNumber>
         <S.ContainerNumber>
           <S.Number className="fonteUnboundedBold" fontColor={"#06A73B"}>
-            R$<span>{props.secondNumber}</span>B.
+            R$<span>{props.secondNumber}</span>
+            <br />
+            Bilhões
           </S.Number>
-          <S.Info>
+          <S.Info className="fonteInterRegular">
             Foram movimentados nas
             <br /> periferias em 2022
           </S.Info>
@@ -33,8 +35,12 @@ export const BigNumbers = (props: IBigNumberProps) => {
         <S.ContainerNumber>
           <S.Number className="fonteUnboundedBold" fontColor={"#FFC700"}>
             <span>{props.thirdNumber}</span>%
+            <br />
           </S.Number>
-          <S.Info>Das pessoas têm interesse em consumir cultura</S.Info>
+          <S.Info className="fonteInterRegular">
+            Das pessoas têm interesse <br />
+            em consumir cultura
+          </S.Info>
         </S.ContainerNumber>
       </S.ContainerNumbers>
       <S.Description>{props?.description}</S.Description>
