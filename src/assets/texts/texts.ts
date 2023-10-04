@@ -30,3 +30,6 @@ export const CellphonesThirdTitle: string = "Monetize sem complicação";
 export const SectionFirstTitle: string = "REDE SOCIAL";
 
 export const SectionSecondTitle: string = "CURSOS";
+
+export const sloganText: string = "Culturallis, a arte de fazer cultura."
+

@@ -14,6 +14,7 @@ import { BigNumbers } from "./components/BigNumbers/index.tsx";
 import { CellphonesModel } from "./components/CellphonesModel/index.tsx";
 import * as S from "./styles.ts";
 import { OurTeam } from "./components/OurTeam/index.tsx";
+import { Slogan } from "./components/Slogan/index.tsx";
 
 function Landing() {
   const opts = {
@@ -226,6 +227,7 @@ function Landing() {
         }
       />
       <OurTeam />
+      <Slogan text={T.sloganText} />
       <Footer idLocation={"footer"} />
     </>
   );

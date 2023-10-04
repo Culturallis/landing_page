@@ -1,6 +1,6 @@
 import React from "react";
-import * as S from "./styles.ts";
-import LogoApoliz from "../../assets/images/Logo_Apoliz.png";
+import * as S from './styles.ts';
+import LogoApoliz from '../../assets/images/Logo_Apoliz.png'
 
 interface IFooterProps {
   idLocation?: string;
