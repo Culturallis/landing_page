@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 interface IContentProps {
-  hasBackground?: boolean;
+  hasBackground?: string;
 }
 
 export const Wrapper = styled.div<IContentProps>(
@@ -9,8 +9,12 @@ export const Wrapper = styled.div<IContentProps>(
     height: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 6rem;
-    background: ${hasBackground ? "#F3F3F3" : "transparent"};
+    padding: 6rem 12rem;
+    background: ${hasBackground ? hasBackground : "transparent"};
+
+    @media (max-width: 1450px) {
+      padding: 6rem 6rem;
+    }
   `
 );
 
@@ -18,9 +22,9 @@ export const Container = styled.div(
   () => css`
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     gap: 2rem;
-    width: 47%;
+    width: 49%;
 
     & > .iframe {
       height: 100%;
@@ -36,5 +40,9 @@ export const Title = styled.h3(
     css`
       font-size: 2.2rem;
       letter-spacing: 0.2rem;
+
+      @media (max-width: 1450px) {
+        font-size: 2rem;
+      }
     `
 );
