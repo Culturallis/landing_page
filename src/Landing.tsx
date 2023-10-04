@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { Navbar } from "./components/Navbar/index.tsx";
 import { Footer } from "./components/Footer/index.tsx";
 import { DownloadsContainer } from "./components/DownloadsContainer/index.tsx";
@@ -15,12 +15,35 @@ import { CellphonesModel } from "./components/CellphonesModel/index.tsx";
 import * as S from "./styles.ts";
 import { OurTeam } from "./components/OurTeam/index.tsx";
 import { Slogan } from "./components/Slogan/index.tsx";
+import { database } from "./firebaseConnection.tsx";
+import { onValue, ref } from "firebase/database";
 
 function Landing() {
   const opts = {
     height: "100%",
     width: "100%",
   };
+
+  const [data, setData] = useState({});
+
+  useEffect(() => {
+    const dadosRef = ref(database, "data");
+
+    const unsubscribe = onValue(dadosRef, (snapshot) => {
+      if (snapshot.exists()) {
+        const resultData = snapshot.val();
+        setData(resultData);
+      }
+    });
+
+    return () => {
+      unsubscribe();
+    };
+  }, []);
+
+  useEffect(() => {
+    console.log(data);
+  }, [data]);
 
   return (
     <>
