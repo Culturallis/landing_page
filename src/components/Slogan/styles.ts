@@ -1,6 +1,6 @@
 import {styled, css} from 'styled-components'
 
-export const SloganSection = styled.section(() => css`
+export const SloganSection = styled('section')(() => css`
     height: 60vh;
     width: 100%;
 
@@ -10,7 +10,7 @@ export const SloganSection = styled.section(() => css`
     align-items: center;
 `)
 
-export const SloganText = styled.h2(() => css`
+export const SloganText = styled('h2')(() => css`
     font-size: 4rem;
     font-weight: 600;
 

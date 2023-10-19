@@ -1,5 +1,5 @@
 import React from "react";
-import * as S from "./styels.ts";
+import * as S from "./styles";
 
 interface ICardPhotoProps {
   img: string;

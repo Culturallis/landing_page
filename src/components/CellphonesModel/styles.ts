@@ -21,7 +21,7 @@ export const Title = styled.h2<IWrapperProps>`
   position: absolute;
   writing-mode: vertical-rl;
   left: 2rem;
-  ${(props) => (props.direction == "left" ? "transform: rotate(180deg);" : "")}
+  ${(props) => (props.direction === "left" ? "transform: rotate(180deg);" : "")}
   font-weight: 700;
   width: fit-content;
   color: ${(props) => props?.colorName};
@@ -32,7 +32,7 @@ export const TitleRight = styled.h2<IWrapperProps>`
   position: absolute;
   writing-mode: vertical-rl;
   left: calc(100% - 4rem);
-  ${(props) => (props.direction == "left" ? "transform: rotate(180deg);" : "")}
+  ${(props) => (props.direction === "left" ? "transform: rotate(180deg);" : "")}
   font-weight: 700;
   width: fit-content;
   color: ${(props) => props?.colorName};
@@ -61,7 +61,7 @@ export const AppSection = styled.div<IWrapperProps>`
   width: 40%;
 
   ${(props) =>
-    props.direction == "left"
+    props.direction === "left"
       ? "align-items: flex-start;"
       : "align-items: flex-end;"}
 `;
@@ -77,7 +77,7 @@ export const SectionTitle = styled.h3<IWrapperProps>`
 
 export const SectionDescription = styled.div<IWrapperProps>`
   ${(props) =>
-    props.direction == "left"
+    props.direction === "left"
       ? "& p { text-align: left; } "
       : "& p { text-align: end; } "}
 `;
@@ -87,7 +87,7 @@ export const ContainerCellphone = styled.div<IWrapperProps>`
   display: flex;
   align-items: center;
   ${(props) =>
-    props.direction == "left"
+    props.direction === "left"
       ? "justify-content: flex-end;"
       : "justify-content: flex-start;"}
 `;

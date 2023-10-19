@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import Avatar from "@mui/material/Avatar";
 
 export const Navbar = styled.nav(
   () => css`
