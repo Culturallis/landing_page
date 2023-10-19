@@ -24,10 +24,10 @@ function Landing() {
     width: "100%",
   };
 
-  const [data, setData] = useState({});
+  const [data, setData] = useState<any>();
 
   useEffect(() => {
-    const dadosRef = ref(database, "data");
+    const dadosRef = ref(database, "Culturallis-LandingPage");
 
     const unsubscribe = onValue(dadosRef, (snapshot) => {
       if (snapshot.exists()) {
@@ -42,7 +42,10 @@ function Landing() {
   }, []);
 
   useEffect(() => {
-    console.log(data);
+    console.log("Categorias count: ", Object.keys(data?.Categorias).length);
+    console.log("Cursos count: ", Object.keys(data?.Cursos).length);
+    console.log("Posts count: ", Object.keys(data?.Posts).length);
+    console.log("Usuários count: ", Object.keys(data?.Usuarios).length);
   }, [data]);
 
   return (
