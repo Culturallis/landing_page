@@ -1,5 +1,5 @@
 import React from "react";
-import * as S from './styles.ts';
+import * as S from './styles';
 import LogoApoliz from '../../assets/images/Logo_Apoliz.png'
 
 interface IFooterProps {

@@ -1,6 +1,4 @@
-import * as S from "./styles.ts";
-import React from "react";
-import logoCulturallis from "../../assets/images/logoCulturallis.png";
+import * as S from "./styles";
 import ana from "../../assets/images/anaDamasceno.png";
 import mirella from "../../assets/images/mirellaMiyakawa.png";
 import helena from "../../assets/images/helenaCosta.jpg";
@@ -102,7 +100,7 @@ export const OurTeam = () => {
           <S.SecondLine>
             <S.Info className="fonteUnboundedBold">
               SUPORTE DE
-              <br /> 
+              <br />
               DESENVOLVIMENTO
             </S.Info>
             {secondLinePeopleSecond.map((item) => (
