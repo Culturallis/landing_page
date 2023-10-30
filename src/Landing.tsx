@@ -16,6 +16,7 @@ import { OurTeam } from "./components/OurTeam";
 import { Slogan } from "./components/Slogan";
 import { database } from "./firebaseConnection";
 import { onValue, ref } from "firebase/database";
+import { useMediaQuery } from "@mui/material";
 
 function Landing() {
   const opts = {
@@ -40,15 +41,16 @@ function Landing() {
     };
   }, []);
 
-  useEffect(() => {
-    if (data) {
-      console.log("Categorias count: ", Object.keys(data?.Categorias).length);
-      console.log("Cursos count: ", Object.keys(data?.Cursos).length);
-      console.log("Posts count: ", Object.keys(data?.Posts).length);
-      console.log("Usuários count: ", Object.keys(data?.Usuarios).length);
-    }
-  }, [data]);
+  // useEffect(() => {
+  //   if (data) {
+  //     console.log("Categorias count: ", Object.keys(data?.Categorias).length);
+  //     console.log("Cursos count: ", Object.keys(data?.Cursos).length);
+  //     console.log("Posts count: ", Object.keys(data?.Posts).length);
+  //     console.log("Usuários count: ", Object.keys(data?.Usuarios).length);
+  //   }
+  // }, [data]);
 
+  
   return (
     <>
       <Navbar
@@ -101,6 +103,7 @@ function Landing() {
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
+            width: "100%",
           }}
         >
           <S.Title className="fonteUnboundedBold">Acesso para Todos</S.Title>

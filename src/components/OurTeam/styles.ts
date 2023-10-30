@@ -3,12 +3,13 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   width: 100%;
   padding: 6rem 12rem;
-
-  @media (min-width: 1450px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 670px){
+    width: 100vh;
+    padding: 2rem;
   }
 `;
 
@@ -23,9 +24,8 @@ export const TeamWrapper = styled.div`
   flex-direction: column;
   padding-top: 8rem;
   gap: 12rem;
-
-  @media (min-width: 1450px) {
-    width: 80%;
+  @media (max-width: 1450px) {
+    width: 100%;
   }
 `;
 
