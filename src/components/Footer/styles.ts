@@ -5,6 +5,9 @@ export const Footer = styled.footer(
     width: 100%;
     background-color: #f5e6fd;
     padding: 4rem 6rem 2rem 6rem;
+    @media (max-width: 670px){
+      width: 100vh;
+    }
   `
 );
 
@@ -17,12 +20,15 @@ export const Container = styled.section(
 
 export const LinksBox = styled.div(
   () => css`
-    width: 20rem;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 1.1rem;
     height: fit-content;
     justify-content: space-between;
+    @media (max-width: 720px){
+      width: 60%;
+    }
   `
 );
 
@@ -68,7 +74,7 @@ export const Link = styled.a(
     cursor: pointer;
     width: fit-content;
     transition: 0.2s;
-
+    gap: 1rem;
     &:hover {
       transition: 0.2s;
       color: #919191;

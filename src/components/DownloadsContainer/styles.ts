@@ -7,9 +7,9 @@ export const Container = styled.div(
     background-color: #f6f6f6;
     align-items: center;
     justify-content: space-between;
-
-    @media (max-width: 1450px) {
-      align-items: flex-end;
+    width: 100%;
+    @media (max-width: 670px){
+      width: 100vh;
     }
   `
 );
@@ -18,25 +18,24 @@ export const Wrapper = styled(Box)(
   () => css`
     display: flex;
     justify-content: flex-end;
-    padding: 6rem 12rem;
-    padding-top: 12rem;
+    align-items: center;
     position: relative;
     background-color: #f6f6f6;
-
-    @media (max-width: 1450px) {
-      padding: 6rem 4rem;
+    margin: 5rem;
+    width: 100%;
+    @media (max-width: 1065px) {
+      justify-content: center;
     }
   `
 );
 
 export const Image = styled.img(
   () => css`
-    width: 50%;
+    width: 30.5rem;
+    height: 34.5rem;
     z-index: 1;
-
-    @media (max-width: 1450px) {
-      height: 100%;
-      width: fit-content;
+    @media (max-width: 1065px){
+      display: none;
     }
   `
 );
@@ -44,18 +43,23 @@ export const Image = styled.img(
 export const InfoContainer = styled.div(
   () =>
     css`
-      height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
       gap: 2rem;
+      width: 100%;
+      padding-top: 2rem;
     `
 );
 
 export const ImageLogo = styled.img(
   () => css`
-    margin-bottom: 2rem;
+    padding: 2rem 0;
+    width: 10rem;
+    @media (max-width: 540px){
+      // width: 5rem;
+    }
   `
 );
 
@@ -71,7 +75,6 @@ export const Title = styled.h1(
 
 export const ContainerDownload = styled.div(
   () => css`
-    width: 100%;
     display: flex;
     justify-content: center;
     gap: 2rem;
@@ -83,6 +86,11 @@ export const GooglePlay = styled.img(
   () =>
     css`
       height: 100%;
+      width: 10rem;
+      // @media (max-width: 540px){
+      //   width: 6rem;
+      //   height: 60%;
+      // }
     `
 );
 
@@ -90,6 +98,11 @@ export const AppleStore = styled.img(
   () =>
     css`
       height: 100%;
+      width: 10rem;
+      // @media (max-width: 540px){
+      //   width: 6rem;
+      //   height: 60%;
+      // }
     `
 );
 
