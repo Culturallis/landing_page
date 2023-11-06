@@ -66,7 +66,7 @@ export const AppSection = styled.div<IWrapperProps>`
   height: 28rem;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 1rem;
   width: 40%;
 
   ${(props) =>
