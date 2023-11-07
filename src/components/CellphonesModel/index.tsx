@@ -1,5 +1,5 @@
 import React from "react";
-import * as S from "./styles";
+import * as S from "./styles.ts";
 
 interface ICellphonesModelProps {
   color?: string;
@@ -14,7 +14,7 @@ export const CellphonesModel = (props: ICellphonesModelProps) => {
   return (
     <S.BigWrapper id={props?.idLocation}>
       <S.Wrapper colorName={props?.color} direction={props?.direction}>
-        {props.direction === "left" ? (
+        {props.direction == "left" ? (
           <S.Title
             colorName={"#EFEFEF"}
             className="fonteInterRegular"
@@ -32,7 +32,7 @@ export const CellphonesModel = (props: ICellphonesModelProps) => {
           </S.TitleRight>
         )}
 
-        {props?.direction === "left" ? (
+        {props?.direction == "left" ? (
           <>
             <S.ContainerCellphone direction={props.direction}>
               <S.Cellphone />

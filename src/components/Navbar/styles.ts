@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import Avatar from "@mui/material/Avatar";
 
 export const Navbar = styled.nav(
   () => css`
@@ -51,20 +52,18 @@ export const Logo = styled("img")(
 export const PageTabs = styled.div(
   () =>
     css`
-      width: 50%;
+      width: 35%;
       height: 100%;
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
-      media (min-width: 900px){
-        width: 25%
-      }
+      padding-right: 2rem;
     `
 );
 
 export const Title = styled.h2(
   () => css`
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     color: #f1f1f1;
     font-weight: bold;
     cursor: pointer;
@@ -73,9 +72,6 @@ export const Title = styled.h2(
     &:hover {
       scale: 1.2;
       transition: 0.2s;
-    }
-    @media (min-width: 768px){
-      font-size: 1.2rem;
     }
   `
 );
