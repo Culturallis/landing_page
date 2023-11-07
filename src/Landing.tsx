@@ -18,7 +18,7 @@ import { database } from "./firebaseConnection";
 import { onValue, ref } from "firebase/database";
 import { useMediaQuery } from "@mui/material";
 import { CardYoutube } from "./components/CardYoutube";
-import { ImportantNumbers } from "./components/ImportantNumbers"
+import { ImportantNumbers } from "./components/ImportantNumbers";
 
 function Landing() {
   const opts = {
@@ -42,7 +42,7 @@ function Landing() {
       unsubscribe();
     };
   }, []);
-  
+
   return (
     <>
       <Navbar
@@ -86,7 +86,7 @@ function Landing() {
           </Fragment>
         }
       />
-      <CardYoutube/>
+      <CardYoutube />
       <ContentsModel
         hasBackground="#F4B413"
         color="#EFEFEF"
@@ -207,15 +207,17 @@ function Landing() {
             />
           </div>
         }
-      />{
-        data &&
-      <ImportantNumbers
-        firstNumber={ data['Usuarios'] && Object.keys(data['Usuarios']).length}
-        secondNumber={ data['Cursos'] && Object.keys(data['Cursos']).length}
-        thirdNumber={ data['Posts'] && Object.keys(data['Posts']).length}
-        fourthNumber={ data['Categorias'] && Object.keys(data['Categorias']).length}
       />
-      }
+      {data && (
+        <ImportantNumbers
+          firstNumber={data["Usuarios"] && Object.keys(data["Usuarios"]).length}
+          secondNumber={data["Cursos"] && Object.keys(data["Cursos"]).length}
+          thirdNumber={data["Posts"] && Object.keys(data["Posts"]).length}
+          fourthNumber={
+            data["Categorias"] && Object.keys(data["Categorias"]).length
+          }
+        />
+      )}
       <OurTeam />
       <Slogan text={T.sloganText} />
       <Footer idLocation={"footer"} />
