@@ -18,7 +18,8 @@ import { database } from "./firebaseConnection";
 import { onValue, ref } from "firebase/database";
 import { useMediaQuery } from "@mui/material";
 import { CardYoutube } from "./components/CardYoutube";
-import { ImportantNumbers } from "./components/ImportantNumbers";
+import { ImportantNumbers } from "./components/ImportantNumber";
+
 
 function Landing() {
   const opts = {
