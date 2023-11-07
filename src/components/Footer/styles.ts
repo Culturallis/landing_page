@@ -11,10 +11,14 @@ export const Footer = styled.footer(
   `
 );
 
-export const Container = styled.section(
+export const Container = styled.div(
   () => css`
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: space-between;
+  gap: 8rem;
+  @media (max-width: )
   `
 );
 
@@ -53,7 +57,7 @@ export const TextLogo = styled.p(
 
 export const ImageLogo = styled.img(
   () => css`
-    height: 70%;
+    height: 90%;
   `
 );
 
@@ -92,3 +96,10 @@ export const Copyright = styled.p(
     color: #313131;
   `
 );
+
+export const WrapperLogo = styled('div')(() => css`
+  padding-top: 2.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`)

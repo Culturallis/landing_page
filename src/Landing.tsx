@@ -17,6 +17,8 @@ import { Slogan } from "./components/Slogan";
 import { database } from "./firebaseConnection";
 import { onValue, ref } from "firebase/database";
 import { useMediaQuery } from "@mui/material";
+import { CardYoutube } from "./components/CardYoutube";
+import { ImportantNumbers } from "./components/ImportantNumbers"
 
 function Landing() {
   const opts = {
@@ -49,6 +51,9 @@ function Landing() {
   //     console.log("Usuários count: ", Object.keys(data?.Usuarios).length);
   //   }
   // }, [data]);
+
+  console.log(data);
+  
 
   
   return (
@@ -94,47 +99,7 @@ function Landing() {
           </Fragment>
         }
       />
-      {window.innerWidth < 1450 ? (
-        <div
-          style={{
-            background: "#F3F3F3",
-            padding: " 6rem 0rem",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            width: "100%",
-          }}
-        >
-          <S.Title className="fonteUnboundedBold">Acesso para Todos</S.Title>
-          <YouTube
-            style={{ width: "60%", height: "32rem" }}
-            className="iframe"
-            videoId={"SgwzPGDl3c4"}
-            opts={opts}
-          />
-        </div>
-      ) : (
-        <div
-          style={{
-            background: "#F3F3F3",
-            padding: " 6rem 0rem",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <S.Title className="fonteUnboundedBold">Acesso para Todos</S.Title>
-          <YouTube
-            style={{ width: "60%", height: "35rem" }}
-            className="iframe"
-            videoId={"SgwzPGDl3c4"}
-            opts={opts}
-          />
-        </div>
-      )}
-
+      <CardYoutube/>
       <ContentsModel
         hasBackground="#F4B413"
         color="#EFEFEF"
@@ -255,7 +220,15 @@ function Landing() {
             />
           </div>
         }
+      />{
+        data &&
+      <ImportantNumbers
+        firstNumber={data['Usuarios'] && Object.keys(data['Usuarios']).length}
+        secondNumber={data['Cursos'] && Object.keys(data['Cursos']).length}
+        thirdNumber={data['Posts'] && Object.keys(data['Posts']).length}
+        fourthNumber={data['Categorias'] && Object.keys(data['Categorias']).length}
       />
+      }
       <OurTeam />
       <Slogan text={T.sloganText} />
       <Footer idLocation={"footer"} />

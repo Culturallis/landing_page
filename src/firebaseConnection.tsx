@@ -6,13 +6,15 @@ const firebaseConfig = {
 
   authDomain: "landingpageculturallis.firebaseapp.com",
 
+  databaseURL: "https://landingpageculturallis-default-rtdb.firebaseio.com",
+
   projectId: "landingpageculturallis",
 
   storageBucket: "landingpageculturallis.appspot.com",
 
   messagingSenderId: "592974573873",
-
-  appId: "1:592974573873:web:96bbcf95add9fb85a2c010",
+  
+  appId: "1:592974573873:web:96bbcf95add9fb85a2c010"
 };
 
 const app = initializeApp(firebaseConfig);
