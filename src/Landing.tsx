@@ -42,19 +42,6 @@ function Landing() {
       unsubscribe();
     };
   }, []);
-
-  // useEffect(() => {
-  //   if (data) {
-  //     console.log("Categorias count: ", Object.keys(data?.Categorias).length);
-  //     console.log("Cursos count: ", Object.keys(data?.Cursos).length);
-  //     console.log("Posts count: ", Object.keys(data?.Posts).length);
-  //     console.log("Usuários count: ", Object.keys(data?.Usuarios).length);
-  //   }
-  // }, [data]);
-
-  console.log(data);
-  
-
   
   return (
     <>
