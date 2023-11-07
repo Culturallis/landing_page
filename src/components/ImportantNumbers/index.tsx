@@ -1,48 +1,52 @@
 import React from "react";
 import * as S from "./styles";
 
-interface IBigNumberProps {
+interface IImportantNumbers {
   firstNumber?: number | string;
   secondNumber?: number | string;
   thirdNumber?: number | string;
+  fourthNumber?: number | string;
   description?: string;
 }
 
-export const BigNumbers = (props: IBigNumberProps) => {
+export const ImportantNumbers = (props: IImportantNumbers) => {
   return (
     <S.Wrapper>
+      <S.Title className="fonteUnboundedBold">Números alcançados</S.Title>
       <S.ContainerNumbers>
         <S.ContainerNumber>
           <S.Number className="fonteUnboundedBold" fontColor={"#E72929"}>
-            <span>{props.firstNumber}</span>%
+            <span>{props.firstNumber}</span>
           </S.Number>
           <S.Info className="fonteInterRegular">
-            Dos brasileiros não têm <br />
-            acesso à cultura{" "}
+            Usuários
           </S.Info>
         </S.ContainerNumber>
         <S.ContainerNumber>
           <S.Number className="fonteUnboundedBold" fontColor={"#06A73B"}>
-            R$<span>{props.secondNumber}</span>
-            Bilhões
+            <span>{props.secondNumber}</span>
           </S.Number>
           <S.Info className="fonteInterRegular">
-            Foram movimentados nas
-            <br /> periferias em 2022
+            Cursos
           </S.Info>
         </S.ContainerNumber>
         <S.ContainerNumber>
           <S.Number className="fonteUnboundedBold" fontColor={"#FFC700"}>
-            <span>{props.thirdNumber}</span>%
-            <br />
+            <span>{props.thirdNumber}</span>
           </S.Number>
           <S.Info className="fonteInterRegular">
-            Das pessoas têm interesse <br />
-            em consumir cultura
+            Posts
+          </S.Info>
+        </S.ContainerNumber>
+        <S.ContainerNumber>
+          <S.Number className="fonteUnboundedBold" fontColor={"#982EAC"}>
+            <span>{props.fourthNumber}</span>
+          </S.Number>
+          <S.Info className="fonteInterRegular">
+            Categorias
           </S.Info>
         </S.ContainerNumber>
       </S.ContainerNumbers>
-      <S.Description>{props?.description}</S.Description>
     </S.Wrapper>
   );
 };

@@ -5,24 +5,34 @@ export const Footer = styled.footer(
     width: 100%;
     background-color: #f5e6fd;
     padding: 4rem 6rem 2rem 6rem;
+    @media (max-width: 670px){
+      width: 100vh;
+    }
   `
 );
 
-export const Container = styled.section(
+export const Container = styled.div(
   () => css`
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: space-between;
+  gap: 8rem;
+  @media (max-width: )
   `
 );
 
 export const LinksBox = styled.div(
   () => css`
-    width: 20rem;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 1.1rem;
     height: fit-content;
     justify-content: space-between;
+    @media (max-width: 720px){
+      width: 60%;
+    }
   `
 );
 
@@ -47,7 +57,7 @@ export const TextLogo = styled.p(
 
 export const ImageLogo = styled.img(
   () => css`
-    height: 70%;
+    height: 90%;
   `
 );
 
@@ -68,7 +78,7 @@ export const Link = styled.a(
     cursor: pointer;
     width: fit-content;
     transition: 0.2s;
-
+    gap: 1rem;
     &:hover {
       transition: 0.2s;
       color: #919191;
@@ -86,3 +96,10 @@ export const Copyright = styled.p(
     color: #313131;
   `
 );
+
+export const WrapperLogo = styled('div')(() => css`
+  padding-top: 2.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`)

@@ -79,7 +79,7 @@ export const Number = styled.div<INumberProps>(
 
 export const Info = styled.h4(
   () => css`
-    font-size: 1.6rem;
+    font-size: 2rem;
     text-align: center;
     align-self: center;
     font-weight: 500;
@@ -96,3 +96,9 @@ export const Description = styled.p(
     justify-content: center;
   `
 );
+
+export const Title = styled.h2(() => css`
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+`)
