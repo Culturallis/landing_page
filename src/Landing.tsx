@@ -20,6 +20,7 @@ import { useMediaQuery } from "@mui/material";
 import { CardYoutube } from "./components/CardYoutube";
 import { ImportantNumbers } from "./components/ImportantNumber";
 
+
 function Landing() {
   const opts = {
     height: "100%",
