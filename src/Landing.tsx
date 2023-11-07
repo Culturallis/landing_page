@@ -1,26 +1,47 @@
-import React, { Fragment } from "react";
-import { Navbar } from "./components/Navbar/index.tsx";
-import { Footer } from "./components/Footer/index.tsx";
-import { DownloadsContainer } from "./components/DownloadsContainer/index.tsx";
-import { ContentsModel } from "./components/ContentsModel/index.tsx";
-import { CardPhoto } from "./components/CardPhoto/index.tsx";
+import React, { Fragment, useEffect, useState } from "react";
+import { Navbar } from "./components/Navbar";
+import { Footer } from "./components/Footer";
+import { DownloadsContainer } from "./components/DownloadsContainer";
+import { ContentsModel } from "./components/ContentsModel";
+import { CardPhoto } from "./components/CardPhoto";
 import Sobre_Culturallis from "./assets/images/Sobre_Culturallis.png";
-import { ParagraphText } from "./common/ParagraghText/index.tsx";
-import * as T from "./assets/texts/texts.ts";
-import { FloatingWords } from "./components/FloatingWords/index.tsx";
+import { ParagraphText } from "./common/ParagraghText";
+import * as T from "./assets/texts/texts";
 import YouTube from "react-youtube";
 import Historia_Culturallis from "./assets/images/Historia_Culturallis.png";
-import { BigNumbers } from "./components/BigNumbers/index.tsx";
-import { CellphonesModel } from "./components/CellphonesModel/index.tsx";
-import * as S from "./styles.ts";
-import { OurTeam } from "./components/OurTeam/index.tsx";
-import { Slogan } from "./components/Slogan/index.tsx";
+import { BigNumbers } from "./components/BigNumbers";
+import { CellphonesModel } from "./components/CellphonesModel";
+import * as S from "./styles";
+import { OurTeam } from "./components/OurTeam";
+import { Slogan } from "./components/Slogan";
+import { database } from "./firebaseConnection";
+import { onValue, ref } from "firebase/database";
+import { useMediaQuery } from "@mui/material";
+import { CardYoutube } from "./components/CardYoutube";
+import { ImportantNumbers } from "./components/ImportantNumbers";
 
 function Landing() {
   const opts = {
     height: "100%",
     width: "100%",
   };
+
+  const [data, setData] = useState<any>();
+
+  useEffect(() => {
+    const dadosRef = ref(database, "Culturallis-LandingPage");
+
+    const unsubscribe = onValue(dadosRef, (snapshot) => {
+      if (snapshot.exists()) {
+        const resultData = snapshot.val();
+        setData(resultData);
+      }
+    });
+
+    return () => {
+      unsubscribe();
+    };
+  }, []);
 
   return (
     <>
@@ -65,46 +86,7 @@ function Landing() {
           </Fragment>
         }
       />
-      {window.innerWidth < 1450 ? (
-        <div
-          style={{
-            background: "#F3F3F3",
-            padding: " 6rem 0rem",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <S.Title className="fonteUnboundedBold">Acesso para Todos</S.Title>
-          <YouTube
-            style={{ width: "60%", height: "32rem" }}
-            className="iframe"
-            videoId={"SgwzPGDl3c4"}
-            opts={opts}
-          />
-        </div>
-      ) : (
-        <div
-          style={{
-            background: "#F3F3F3",
-            padding: " 6rem 0rem",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <S.Title className="fonteUnboundedBold">Acesso para Todos</S.Title>
-          <YouTube
-            style={{ width: "60%", height: "35rem" }}
-            className="iframe"
-            videoId={"SgwzPGDl3c4"}
-            opts={opts}
-          />
-        </div>
-      )}
-
+      <CardYoutube />
       <ContentsModel
         hasBackground="#F4B413"
         color="#EFEFEF"
@@ -226,6 +208,16 @@ function Landing() {
           </div>
         }
       />
+      {data && (
+        <ImportantNumbers
+          firstNumber={data["Usuarios"] && Object.keys(data["Usuarios"]).length}
+          secondNumber={data["Cursos"] && Object.keys(data["Cursos"]).length}
+          thirdNumber={data["Posts"] && Object.keys(data["Posts"]).length}
+          fourthNumber={
+            data["Categorias"] && Object.keys(data["Categorias"]).length
+          }
+        />
+      )}
       <OurTeam />
       <Slogan text={T.sloganText} />
       <Footer idLocation={"footer"} />
