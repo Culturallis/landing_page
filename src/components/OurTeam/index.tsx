@@ -1,4 +1,4 @@
-import * as S from "./styles.ts";
+import * as S from "./styles";
 import React from "react";
 import logoCulturallis from "../../assets/images/logoCulturallis.png";
 import ana from "../../assets/images/anaDamasceno.png";

@@ -17,7 +17,7 @@ import { Slogan } from "./components/Slogan";
 import { database } from "./firebaseConnection";
 import { onValue, ref } from "firebase/database";
 import { useMediaQuery } from "@mui/material";
-import { CardYoutube } from "./components/CardYoutube";
+// import { CardYoutube } from "./components/CardYoutube";
 import { ImportantNumbers } from "./components/ImportantNumber";
 
 
@@ -66,7 +66,7 @@ function Landing() {
           }
         }}
       />
-      <DownloadsContainer />
+      <DownloadsContainer/>
       <ContentsModel
         firstChild={<CardPhoto img={Sobre_Culturallis}></CardPhoto>}
         idLocation={"about"}
@@ -87,7 +87,7 @@ function Landing() {
           </Fragment>
         }
       />
-      <CardYoutube />
+      {/* <CardYoutube /> */}
       <ContentsModel
         hasBackground="#F4B413"
         color="#EFEFEF"

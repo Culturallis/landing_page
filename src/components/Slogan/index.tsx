@@ -1,4 +1,5 @@
-import * as S from './styles.ts';
+import React from 'react';
+import * as S from './styles';
 
 interface ISloganProps{
     text: string
