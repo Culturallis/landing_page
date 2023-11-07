@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 
+
 interface INumberProps {
   fontColor: string;
 }
