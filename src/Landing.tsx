@@ -210,10 +210,10 @@ function Landing() {
       />{
         data &&
       <ImportantNumbers
-        firstNumber={data['Usuarios'] && Object.keys(data['Usuarios']).length}
-        secondNumber={data['Cursos'] && Object.keys(data['Cursos']).length}
-        thirdNumber={data['Posts'] && Object.keys(data['Posts']).length}
-        fourthNumber={data['Categorias'] && Object.keys(data['Categorias']).length}
+        firstNumber={ data['Usuarios'] && Object.keys(data['Usuarios']).length}
+        secondNumber={ data['Cursos'] && Object.keys(data['Cursos']).length}
+        thirdNumber={ data['Posts'] && Object.keys(data['Posts']).length}
+        fourthNumber={ data['Categorias'] && Object.keys(data['Categorias']).length}
       />
       }
       <OurTeam />
