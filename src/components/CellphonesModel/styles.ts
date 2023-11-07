@@ -14,9 +14,6 @@ export const Wrapper = styled.div<IWrapperProps>`
   align-items: center;
   padding: 6rem 2rem;
   gap: 5rem;
-  @media (max-width: 670px){
-    width: 100vh;
-  }
 `;
 
 export const Title = styled.h2<IWrapperProps>`
@@ -24,13 +21,10 @@ export const Title = styled.h2<IWrapperProps>`
   position: absolute;
   writing-mode: vertical-rl;
   left: 2rem;
-  ${(props) => (props.direction === "left" ? "transform: rotate(180deg);" : "")}
+  ${(props) => (props.direction == "left" ? "transform: rotate(180deg);" : "")}
   font-weight: 700;
   width: fit-content;
   color: ${(props) => props?.colorName};
-  @media(max-width: 700px){
-    display: none;
-  }
 `;
 
 export const TitleRight = styled.h2<IWrapperProps>`
@@ -38,13 +32,10 @@ export const TitleRight = styled.h2<IWrapperProps>`
   position: absolute;
   writing-mode: vertical-rl;
   left: calc(100% - 4rem);
-  ${(props) => (props.direction === "left" ? "transform: rotate(180deg);" : "")}
+  ${(props) => (props.direction == "left" ? "transform: rotate(180deg);" : "")}
   font-weight: 700;
   width: fit-content;
   color: ${(props) => props?.colorName};
-  @media(max-width: 700px){
-    display: none;
-  }
 `;
 
 export const BigWrapper = styled.div(
@@ -66,11 +57,11 @@ export const AppSection = styled.div<IWrapperProps>`
   height: 28rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 4rem;
   width: 40%;
 
   ${(props) =>
-    props.direction === "left"
+    props.direction == "left"
       ? "align-items: flex-start;"
       : "align-items: flex-end;"}
 `;
@@ -82,14 +73,11 @@ export const SectionTitle = styled.h3<IWrapperProps>`
   color: #f1f1f1;
   text-transform: uppercase;
   font-weight: 800;
-  @media (max-width: 700px){
-    font-size: 1.7rem;
-  }
 `;
 
 export const SectionDescription = styled.div<IWrapperProps>`
   ${(props) =>
-    props.direction === "left"
+    props.direction == "left"
       ? "& p { text-align: left; } "
       : "& p { text-align: end; } "}
 `;
@@ -99,7 +87,7 @@ export const ContainerCellphone = styled.div<IWrapperProps>`
   display: flex;
   align-items: center;
   ${(props) =>
-    props.direction === "left"
+    props.direction == "left"
       ? "justify-content: flex-end;"
       : "justify-content: flex-start;"}
 `;

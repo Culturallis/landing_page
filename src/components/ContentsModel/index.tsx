@@ -1,5 +1,5 @@
 import React from "react";
-import * as S from "./styles";
+import * as S from "./styles.ts";
 
 interface IContentsModel {
   firstChild?: React.ReactNode;
@@ -9,12 +9,11 @@ interface IContentsModel {
   color?: string;
   idLocation?: string;
 }
-const widthImg = "22rem"
 
 export const ContentsModel = (props: IContentsModel) => {
   return (
     <S.Wrapper hasBackground={props.hasBackground} id={props.idLocation}>
-      <S.Container sizeImg={widthImg}>{props?.firstChild}</S.Container>
+      <S.Container>{props?.firstChild}</S.Container>
       <S.Container style={{ color: props.color }} className="fonteInterRegular">
         <S.Title
           style={{ color: props?.color }}

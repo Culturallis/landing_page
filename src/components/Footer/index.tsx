@@ -1,5 +1,5 @@
 import React from "react";
-import * as S from './styles';
+import * as S from './styles.ts';
 import LogoApoliz from '../../assets/images/Logo_Apoliz.png'
 
 interface IFooterProps {
@@ -9,7 +9,7 @@ interface IFooterProps {
 export const Footer = ({ idLocation }: IFooterProps) => {
   return (
     <S.Footer>
-      <S.Container>
+      <S.Container id={idLocation}>
         <S.LinksBox>
           <S.Title className="fonteUnboundedBold">Links úteis</S.Title>
           <S.Link
@@ -23,7 +23,7 @@ export const Footer = ({ idLocation }: IFooterProps) => {
           >
             Saiba mais sobre a Culturallis
           </S.Link>
-          <S.Link className="fonteInterRegular">Cadastre-se</S.Link>
+          {/* <S.Link className="fonteInterRegular">Cadastre-se</S.Link> */}
           <S.Link
             className="fonteInterRegular"
             href="mailto:apoliz.cultura@gmail.com"
@@ -49,13 +49,11 @@ export const Footer = ({ idLocation }: IFooterProps) => {
           <S.Link className="fonteInterRegular">Instagram</S.Link>
           <S.Link className="fonteInterRegular">Tik Tok</S.Link>
         </S.LinksBox>
-      </S.Container>
-      <S.WrapperLogo>
         <S.LogoBox>
           <S.TextLogo className="fonteInterRegular">App By</S.TextLogo>
           <S.ImageLogo src={LogoApoliz} />
         </S.LogoBox>
-      </S.WrapperLogo>
+      </S.Container>
       <S.Copyright className="fonteInterRegular">
         Culturallis <span dangerouslySetInnerHTML={{ __html: "&copy;" }} />
       </S.Copyright>
