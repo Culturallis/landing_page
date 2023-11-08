@@ -3,7 +3,7 @@ name: Deploying Landing Page on Render
 on:
   pull_request:
     branches:
-      - main
+      - deployedProject
 
 jobs:
   build:
