@@ -7,8 +7,8 @@ export const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  @media (max-width: 670px){
-    width: 100vh;
+  @media (max-width: 670px) {
+    width: 100%;
     padding: 2rem;
   }
 `;
@@ -44,8 +44,12 @@ export const FirstGradeWrapper = styled.div`
   width: 100%;
   flex-direction: column;
   margin-top: -4rem;
-  @media (max-width: 960px){
+  @media (max-width: 960px) {
     flex-direction: row-reverse;
+  }
+
+  @media (max-width: 540px) {
+    flex-direction: column;
   }
 `;
 
@@ -55,7 +59,7 @@ export const FirstLine = styled.div`
   align-items: center;
   width: 100%;
   gap: 4rem;
-  @media (max-width: 960px){
+  @media (max-width: 960px) {
     flex-direction: column-reverse;
     gap: 2rem;
   }
@@ -67,7 +71,7 @@ export const SecondLine = styled.div`
   align-items: center;
   gap: 4rem;
   width: 100%;
-  @media (max-width: 960px){
+  @media (max-width: 960px) {
     flex-direction: column;
     gap: 2rem;
   }
@@ -78,6 +82,11 @@ export const Info = styled.h3`
   width: fit-content;
   align-self: flex-end;
   margin-bottom: 0rem;
+
+  @media (max-width: 540px) {
+    align-self: center;
+    text-align: center;
+  }
 `;
 
 export const SecondGradeWrapper = styled.div`
@@ -87,11 +96,13 @@ export const SecondGradeWrapper = styled.div`
   flex-direction: column;
   margin-top: -4rem;
   margin-bottom: 4rem;
-  @media (max-width: 960px){
+  @media (max-width: 960px) {
     flex-direction: row-reverse;
+  }
+
+  @media (max-width: 540px) {
+    flex-direction: column;
   }
 `;
 
-export const ImgIntegrantes = styled.img`
-  
-`;
+export const ImgIntegrantes = styled.img``;

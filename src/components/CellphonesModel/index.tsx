@@ -1,5 +1,7 @@
 import React from "react";
 import * as S from "./styles";
+import imagePosts from "../../assets/images/imagePosts.png";
+// import imageCourses from "../../assets/images/"
 
 interface ICellphonesModelProps {
   color?: string;
@@ -35,7 +37,7 @@ export const CellphonesModel = (props: ICellphonesModelProps) => {
         {props?.direction === "left" ? (
           <>
             <S.ContainerCellphone direction={props.direction}>
-              <S.Cellphone />
+              <S.Cellphone src={imagePosts} />
             </S.ContainerCellphone>
             <S.AppSection
               className="fonteInterRegular"
@@ -69,7 +71,7 @@ export const CellphonesModel = (props: ICellphonesModelProps) => {
               </S.SectionDescription>
             </S.AppSection>
             <S.ContainerCellphone direction={props.direction}>
-              <S.Cellphone />
+              <S.Cellphone src={""}/>
             </S.ContainerCellphone>
           </>
         )}

@@ -24,7 +24,7 @@ export const Wrapper = styled.div<IContentProps>(
       justify-content: space-around;
     }
     @media (max-width: 670px){
-      width: 100vh;
+      width: 100%;
     }
   `
 );

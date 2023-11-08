@@ -8,8 +8,8 @@ export const Container = styled.div(
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    @media (max-width: 670px){
-      width: 100vh;
+    @media (max-width: 670px) {
+      width: 100%;
     }
   `
 );
@@ -25,6 +25,8 @@ export const Wrapper = styled(Box)(
     width: 100%;
     @media (max-width: 1065px) {
       justify-content: center;
+      margin: 0;
+      padding: 4rem;
     }
   `
 );
@@ -34,7 +36,7 @@ export const Image = styled.img(
     width: 30.5rem;
     height: 34.5rem;
     z-index: 1;
-    @media (max-width: 1065px){
+    @media (max-width: 1065px) {
       display: none;
     }
   `
@@ -57,8 +59,8 @@ export const ImageLogo = styled.img(
   () => css`
     padding: 2rem 0;
     width: 10rem;
-    @media (max-width: 540px){
-      // width: 5rem;
+    @media (max-width: 540px) {
+      width: 6rem;
     }
   `
 );
@@ -70,6 +72,10 @@ export const Title = styled.h1(
       text-weight: bold;
       text-align: center;
       text-transform: uppercase;
+
+      @media (max-width: 540px) {
+        font-size: 2rem;
+      }
     `
 );
 
@@ -87,10 +93,10 @@ export const GooglePlay = styled.img(
     css`
       height: 100%;
       width: 10rem;
-      // @media (max-width: 540px){
-      //   width: 6rem;
-      //   height: 60%;
-      // }
+      @media (max-width: 540px) {
+        width: 6rem;
+        height: 60%;
+      }
     `
 );
 
@@ -99,10 +105,10 @@ export const AppleStore = styled.img(
     css`
       height: 100%;
       width: 10rem;
-      // @media (max-width: 540px){
-      //   width: 6rem;
-      //   height: 60%;
-      // }
+      @media (max-width: 540px) {
+        width: 6rem;
+        height: 60%;
+      }
     `
 );
 
