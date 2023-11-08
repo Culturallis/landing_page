@@ -54,7 +54,7 @@ export const BigWrapper = styled.div(
   `
 );
 
-export const Cellphone = styled.div(
+export const Cellphone = styled.img(
   () => css`
     height: 28rem;
     background: #d9d9d9;
