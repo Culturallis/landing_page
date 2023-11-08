@@ -16,11 +16,11 @@ export const Wrapper = styled.div(
     @media (max-width: 1450px) {
       padding: 8rem 6rem;
     }
-    @media (max-width: 1200px){
+    @media (max-width: 1200px) {
       padding: 4rem 2rem;
     }
-    @media (max-width: 670px){
-      width: 100vh;
+    @media (max-width: 670px) {
+      width: 100%;
     }
   `
 );
@@ -33,10 +33,13 @@ export const ContainerNumbers = styled.div(
     height: 100%;
     gap: 3rem;
     align-items: center;
-    @media (max-width: 1200px){
+    @media (max-width: 1200px) {
       flex-direction: column;
     }
-  
+
+    @media (max-width: 540px) {
+      gap: 4rem;
+    }
   `
 );
 
@@ -48,9 +51,9 @@ export const ContainerNumber = styled.div(
     align-items: center;
     gap: 0.5rem;
     width: 55%;
-    @media (max-width: 850px){
+    @media (max-width: 850px) {
       width: 70%;
-      gap: 1.5rem;
+      gap: 1rem;
     }
   `
 );
@@ -68,6 +71,10 @@ export const Number = styled.div<INumberProps>(
       font-size: 5.8rem;
       height: fit-content;
       display: inline-block;
+
+      @media (max-width: 540px) {
+        font-size: 4.6rem;
+      }
     }
 
     & > div {

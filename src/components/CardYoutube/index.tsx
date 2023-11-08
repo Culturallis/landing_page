@@ -10,11 +10,11 @@ export const CardYoutube = () => {
             <S.Container>
                 <S.Title className="fonteUnboundedBold">Acesso para Todos</S.Title>
                 <div>
-                    <YouTube
+                    {/* <YouTube
                         style={{ width: "100%", height: "27rem" }}
                         className="iframe"
                         videoId={"SgwzPGDl3c4"}
-                    />
+                    /> */}
                 </div>
             </S.Container>
         </S.CardYoutube>

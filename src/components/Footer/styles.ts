@@ -5,20 +5,26 @@ export const Footer = styled.footer(
     width: 100%;
     background-color: #f5e6fd;
     padding: 4rem 6rem 2rem 6rem;
-    @media (max-width: 670px){
-      width: 100vh;
+    @media (max-width: 670px) {
+      width: 100%;
+      padding: 0;
+      padding-top: 2rem;
     }
   `
 );
 
 export const Container = styled.div(
   () => css`
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  align-items: space-between;
-  gap: 8rem;
-  @media (max-width: )
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: space-between;
+    gap: 8rem;
+    @media (max-width: 720px) {
+      width: 100%;
+      gap: 2rem;
+      justify-content: center;
+    }
   `
 );
 
@@ -30,8 +36,8 @@ export const LinksBox = styled.div(
     gap: 1.1rem;
     height: fit-content;
     justify-content: space-between;
-    @media (max-width: 720px){
-      width: 60%;
+    @media (max-width: 720px) {
+      width: 40%;
     }
   `
 );
@@ -66,6 +72,10 @@ export const Title = styled.h2(
     font-size: 1.7rem;
     font-weight: 500;
     color: #8802c7;
+
+    @media (max-width: 540px) {
+      font-size: 1.4rem;
+    }
   `
 );
 
@@ -97,9 +107,11 @@ export const Copyright = styled.p(
   `
 );
 
-export const WrapperLogo = styled('div')(() => css`
-  padding-top: 2.5rem;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-`)
+export const WrapperLogo = styled("div")(
+  () => css`
+    padding-top: 2.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  `
+);
