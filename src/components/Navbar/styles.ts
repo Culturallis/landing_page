@@ -15,9 +15,13 @@ export const Navbar = styled.nav(
 
 export const BoxAvatar = styled.div(
   () => css`
-    width: 60%;
+    width: 50%;
     height: 100%;
     display: flex;
+
+    @media (max-width: 768px) {
+      width: 40%;
+    }
   `
 );
 
@@ -56,8 +60,12 @@ export const PageTabs = styled.div(
       display: flex;
       justify-content: space-around;
       align-items: center;
-      media (min-width: 900px){
-        width: 25%
+      media (max-width: 900px) {
+        width: 25%;
+      }
+
+      @media (max-width: 768px) {
+        width: 60%;
       }
     `
 );
@@ -74,8 +82,9 @@ export const Title = styled.h2(
       scale: 1.2;
       transition: 0.2s;
     }
-    @media (min-width: 768px){
-      font-size: 1.2rem;
+
+    @media (max-width: 768px) {
+      font-size: 0.7rem;
     }
   `
 );

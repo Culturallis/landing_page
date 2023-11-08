@@ -12,7 +12,7 @@ export const CardYoutube = styled.div(() => css`
     justify-content: center;
     align-items: center;
     @media (max-width: 670px){
-        width: 100vh;
+        width: 100%;
     }
 `)
 
@@ -25,7 +25,7 @@ export const Container = styled.div(() => css`
     justify-content: center;
     width: 100%;
     @media (max-width: 670px){
-        width: 100vh;
+        width: 100%;
     }
 `)
 
@@ -33,6 +33,10 @@ export const Title = styled.h3(() => css`
     font-size: 2.2rem;
     letter-spacing: 0.2rem;
     margin-bottom: 4rem;
+
+    @media (max-width: 540px) {
+        font-size: 1.6rem;
+      }
 `)
 
 export const VideoYoutube = styled(YouTube)(() => css`
