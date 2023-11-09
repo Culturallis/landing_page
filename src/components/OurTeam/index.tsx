@@ -1,6 +1,4 @@
 import * as S from "./styles.ts";
-import React from "react";
-import logoCulturallis from "../../assets/images/logoCulturallis.png";
 import ana from "../../assets/images/anaDamasceno.png";
 import mirella from "../../assets/images/mirellaMiyakawa.png";
 import helena from "../../assets/images/helenaCosta.jpg";
@@ -13,6 +11,7 @@ import pedro from "../../assets/images/pedroSchettini.jpeg";
 import arthuMica from "../../assets/images/arthurMicarelli.jpg";
 import davi from "../../assets/images/daviPiassi.png";
 import artur from "../../assets/images/arturCassuriaga.png";
+import React from "react";
 
 export const OurTeam = () => {
   const firstLinePeople = [
@@ -49,16 +48,17 @@ export const OurTeam = () => {
         desigualdade social
       </S.Title>
       <S.TeamWrapper>
-        <S.FirstGradeWrapper>
           <S.TitleTeam className="fonteUnboundedBold">NOSSO TIME</S.TitleTeam>
+          <S.Info className="fonteUnboundedBold">FUNDADORES</S.Info>
+        <S.FirstGradeWrapper>
           <S.FirstLine>
             {firstLinePeople.map((item) => (
               <img
                 key={item.name}
                 alt={item.name}
                 style={{
-                  height: "8rem",
-                  width: "8rem",
+                  height: "10rem",
+                  width: "10rem",
                   borderRadius: "100%",
                   border: "solid 2px #0e0e0e",
                 }}
@@ -67,14 +67,13 @@ export const OurTeam = () => {
             ))}
           </S.FirstLine>
           <S.SecondLine>
-            <S.Info className="fonteUnboundedBold">FUNDADORES</S.Info>
             {secondLinePeople.map((item) => (
               <img
                 key={item.name}
                 alt={item.name}
                 style={{
-                  height: "8rem",
-                  width: "8rem",
+                  height: "10rem",
+                  width: "10rem",
                   borderRadius: "100%",
                   border: "solid 2px #0e0e0e",
                 }}
@@ -83,6 +82,11 @@ export const OurTeam = () => {
             ))}
           </S.SecondLine>
         </S.FirstGradeWrapper>
+                <S.Info id="desenvolvimento" className="fonteUnboundedBold">
+                  SUPORTE DE
+                  <br />
+                  DESENVOLVIMENTO
+                </S.Info>
         <S.SecondGradeWrapper>
           <S.FirstLine>
             {firstLinePeopleSecond.map((item) => (
@@ -90,8 +94,8 @@ export const OurTeam = () => {
                 key={item.name}
                 alt={item.name}
                 style={{
-                  height: "8rem",
-                  width: "8rem",
+                  height: "10rem",
+                  width: "10rem",
                   borderRadius: "100%",
                   border: "solid 2px #0e0e0e",
                 }}
@@ -100,18 +104,13 @@ export const OurTeam = () => {
             ))}
           </S.FirstLine>
           <S.SecondLine>
-            <S.Info className="fonteUnboundedBold">
-              SUPORTE DE
-              <br /> 
-              DESENVOLVIMENTO
-            </S.Info>
             {secondLinePeopleSecond.map((item) => (
               <img
                 key={item.name}
                 alt={item.name}
                 style={{
-                  height: "8rem",
-                  width: "8rem",
+                  height: "10rem",
+                  width: "10rem",
                   borderRadius: "100%",
                   border: "solid 2px #0e0e0e",
                 }}
