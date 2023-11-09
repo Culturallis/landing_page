@@ -13,9 +13,14 @@ export const Wrapper = styled.div(
     justify-content: space-between;
     align-items: center;
     padding: 12rem 6rem;
-
     @media (max-width: 1450px) {
       padding: 8rem 6rem;
+    }
+    @media (max-width: 1200px) {
+      padding: 4rem 2rem;
+    }
+    @media (max-width: 670px) {
+      width: 100%;
     }
   `
 );
@@ -24,8 +29,17 @@ export const ContainerNumbers = styled.div(
   () => css`
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 100%;
+    gap: 3rem;
+    align-items: center;
+    @media (max-width: 1200px) {
+      flex-direction: column;
+    }
+
+    @media (max-width: 540px) {
+      gap: 4rem;
+    }
   `
 );
 
@@ -36,7 +50,11 @@ export const ContainerNumber = styled.div(
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
-    width: 33%;
+    width: 55%;
+    @media (max-width: 850px) {
+      width: 70%;
+      gap: 1rem;
+    }
   `
 );
 
@@ -53,6 +71,10 @@ export const Number = styled.div<INumberProps>(
       font-size: 5.8rem;
       height: fit-content;
       display: inline-block;
+
+      @media (max-width: 540px) {
+        font-size: 4.6rem;
+      }
     }
 
     & > div {

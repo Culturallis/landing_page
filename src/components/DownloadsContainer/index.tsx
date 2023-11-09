@@ -1,9 +1,14 @@
-import React from "react";
 import Bricks from "../../assets/images/bricks.png";
 import * as S from "./styles.ts";
 import logoCulturallis from "../../assets/images/logoCulturallisBigSize.png";
 import PlayStore from "../../assets/images/PlayStore.png";
 import AppStore from "../../assets/images/AppleStore.png";
+import React from "react";
+
+interface IDownloadsContainerProps {
+  linkPlayStore?: string;
+  linkAppleStore?: string;
+}
 
 export const DownloadsContainer = () => {
   return (

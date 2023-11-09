@@ -11,15 +11,14 @@ import YouTube from "react-youtube";
 import Historia_Culturallis from "./assets/images/Historia_Culturallis.png";
 import { BigNumbers } from "./components/BigNumbers/index.tsx";
 import { CellphonesModel } from "./components/CellphonesModel/index.tsx";
-import * as S from "./styles";
+import * as S from "./styles.ts";
 import { OurTeam } from "./components/OurTeam/index.tsx";
 import { Slogan } from "./components/Slogan/index.tsx";
 import { database } from "./firebaseConnection.tsx";
 import { onValue, ref } from "firebase/database";
 import { useMediaQuery } from "@mui/material";
-// import { CardYoutube } from "./components/CardYoutube/index.tsx";
+import { CardYoutube } from "./components/CardYoutube/index.tsx";
 import { ImportantNumbers } from "./components/ImportantNumber/index.tsx";
-
 
 function Landing() {
   const opts = {
@@ -87,7 +86,7 @@ function Landing() {
           </Fragment>
         }
       />
-      {/* <CardYoutube /> */}
+      <CardYoutube />
       <ContentsModel
         hasBackground="#F4B413"
         color="#EFEFEF"
