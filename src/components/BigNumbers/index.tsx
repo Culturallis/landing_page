@@ -24,7 +24,6 @@ export const BigNumbers = (props: IBigNumberProps) => {
         <S.ContainerNumber>
           <S.Number className="fonteUnboundedBold" fontColor={"#06A73B"}>
             R$<span>{props.secondNumber}</span>
-            <br />
             Bilhões
           </S.Number>
           <S.Info className="fonteInterRegular">

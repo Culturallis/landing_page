@@ -16,7 +16,7 @@ jobs:
       - name: Install Project
         run: npm install --force
 
-      - name: Render Deploy
+      - name: Render Deploy Web
         uses: johnbeynon/render-deploy-action@v0.0.8
         with:
           service-id: ${{ secrets.SERVICE_ID }}

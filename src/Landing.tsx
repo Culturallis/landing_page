@@ -1,25 +1,24 @@
 import React, { Fragment, useEffect, useState } from "react";
-import { Navbar } from "./components/Navbar";
-import { Footer } from "./components/Footer";
-import { DownloadsContainer } from "./components/DownloadsContainer";
-import { ContentsModel } from "./components/ContentsModel";
-import { CardPhoto } from "./components/CardPhoto";
+import { Navbar } from "./components/Navbar/index.tsx";
+import { Footer } from "./components/Footer/index.tsx";
+import { DownloadsContainer } from "./components/DownloadsContainer/index.tsx";
+import { ContentsModel } from "./components/ContentsModel/index.tsx";
+import { CardPhoto } from "./components/CardPhoto/index.tsx";
 import Sobre_Culturallis from "./assets/images/Sobre_Culturallis.png";
-import { ParagraphText } from "./common/ParagraghText";
-import * as T from "./assets/texts/texts";
+import { ParagraphText } from "./common/ParagraghText/index.tsx";
+import * as T from "./assets/texts/texts.ts";
 import YouTube from "react-youtube";
 import Historia_Culturallis from "./assets/images/Historia_Culturallis.png";
-import { BigNumbers } from "./components/BigNumbers";
-import { CellphonesModel } from "./components/CellphonesModel";
-import * as S from "./styles";
-import { OurTeam } from "./components/OurTeam";
-import { Slogan } from "./components/Slogan";
-import { database } from "./firebaseConnection";
+import { BigNumbers } from "./components/BigNumbers/index.tsx";
+import { CellphonesModel } from "./components/CellphonesModel/index.tsx";
+import * as S from "./styles.ts";
+import { OurTeam } from "./components/OurTeam/index.tsx";
+import { Slogan } from "./components/Slogan/index.tsx";
+import { database } from "./firebaseConnection.tsx";
 import { onValue, ref } from "firebase/database";
 import { useMediaQuery } from "@mui/material";
-// import { CardYoutube } from "./components/CardYoutube";
-import { ImportantNumbers } from "./components/ImportantNumber";
-
+import { CardYoutube } from "./components/CardYoutube/index.tsx";
+import { ImportantNumbers } from "./components/ImportantNumber/index.tsx";
 
 function Landing() {
   const opts = {

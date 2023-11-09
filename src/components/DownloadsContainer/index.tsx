@@ -1,14 +1,11 @@
-import React from "react";
 import Bricks from "../../assets/images/bricks.png";
 import * as S from "./styles";
 import logoCulturallis from "../../assets/images/logoCulturallisBigSize.png";
 import PlayStore from "../../assets/images/PlayStore.png";
 import AppStore from "../../assets/images/AppleStore.png";
+import React from "react";
 
-export const DownloadsContainer = (
-  // linkPlayStore?: string,
-  // linkAppleStore?: string
-) => {
+export const DownloadsContainer = () => {
   return (
     <S.Container>
       <S.Image src={Bricks} />
